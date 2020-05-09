@@ -77,13 +77,13 @@ def response():
     text_content=email_message.get_payload()
     text_content2=text_content[0].get_payload()
     
-    if text_content2.find("No")>=0:
+    if text_content2[0:2].find("No")>=0:
         print("Starting to send reply to No..")
         with smtplib.SMTP_SSL("smtp.gmail.com",port,context=context) as server:
             server.login(sender,password)
             server.sendmail(sender,receiver,final_message_no)
         print("Sent. Yay!")
-    elif text_content2.find("Yes")>=0:
+    elif text_content2[0:3].find("Yes")>=0:
         print("Starting to send reply to Yes..")
         with smtplib.SMTP_SSL("smtp.gmail.com",port,context=context) as server:
             server.login(sender,password)
