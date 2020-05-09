@@ -60,7 +60,19 @@ def response():
     mail=imaplib.IMAP4_SSL("imap.gmail.com")
     mail.login(sender, password)
     
+    import time,sys
+    
     mail.select("inbox")
+    start=time.time()
+    (retcode, messages) = mail.search(None, '(UNSEEN)')
+    while b'' in messages:
+        (retcode, messages) = mail.search(None, '(UNSEEN)')
+        end=time.time()
+        if end-start>120.0:
+            print("Transaction cancelled due to no reply from user")
+            sys.exit()
+    
+    print("Reply received from user")
     result, data=mail.uid("search", None, "ALL")
     inbox_item_list=data[0].split()
     most_recent=inbox_item_list[-1]
@@ -108,18 +120,6 @@ def sms():
     and if you have initiated the transaction, then to proceed further, reply with: Yes
     """
     
-    final_message_no="""Subject: Credit Card Security Alert
-    
-    Transaction Blocked."""
-    
-    final_message_yes="""Subject: Credit Card Security Alert
-    
-    You may proceed with your transaction."""
-    
-    final_message_unknown="""Subject: Credit Card Security Alert
-    
-    Couldn't Process Reply. Reply with either Yes or No."""
-    
     import smtplib, ssl
     
     port=465
@@ -137,10 +137,7 @@ def sms():
         server.sendmail(sender,receiver,security_message)
     print("Sent. Yay!")
     
-    import threading
-    
-    timer = threading.Timer(2.0, response) 
-    timer.start()
+    response()
     
     
 
