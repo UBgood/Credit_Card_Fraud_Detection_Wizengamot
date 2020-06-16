@@ -47,7 +47,7 @@ Major Bugs(0)
 
 Minor Bugs(1) - Email used instead of SMS due to unavailability of funds to buy SMS service.
 
-Bug Fixes - issue: Security message gets sent to SPAM folder in user's device.  status: fixed
+Bug Fixes(1) - issue: Security message gets sent to SPAM folder in user's device.  status: fixed
 
 Release 1.0
 
@@ -59,4 +59,10 @@ ProcessController.py - Central control class that controls all sub-processes
 Entity Classes:
 Trainer.py - To train the Machine Leaning Model
 
+Bugs:
 
+Major Bugs(0) 
+
+Minor Bugs(1) - Email used instead of SMS due to unavailability of funds to buy SMS service.
+
+Bug Fixes(0)
