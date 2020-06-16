@@ -25,10 +25,38 @@ Entity Classes:
 MLModel.py - To run the Machine Learning Model for Fraud Detection, 
 Trainer.py - To train the Machine Leaning Model
 
+Bugs:
+
+Major Bugs(1) - Security message gets sent to SPAM folder in user's device.
+
+Minor Bugs(1) - Email used instead of SMS due to unavailability of funds to buy SMS service.
+
 Release 0.2
 
 Master Branch:
 
 Control Classes:
-ProcessController.py - Central control class that controls all sub-processes, 
+ProcessController.py - Central control class that controls all sub-processes (All control classes merged into one for efficiency)
+
+Entity Classes:
+Trainer.py - To train the Machine Leaning Model
+
+Bugs:
+
+Major Bugs(0) 
+
+Minor Bugs(1) - Email used instead of SMS due to unavailability of funds to buy SMS service.
+
+Bug Fixes - issue: Security message gets sent to SPAM folder in user's device.  status: fixed
+
+Release 1.0
+
+Master Branch:
+
+Control Classes:
+ProcessController.py - Central control class that controls all sub-processes
+
+Entity Classes:
+Trainer.py - To train the Machine Leaning Model
+
 
