@@ -29,7 +29,9 @@ Bugs:
 
 Major Bugs(1) - Security message gets sent to SPAM folder in user's device.
 
-Minor Bugs(1) - Email used instead of SMS due to unavailability of funds to buy SMS service.
+Non-functional Requirements:
+
+Email used instead of SMS due to unavailability of funds to buy SMS service.
 
 Release 0.2
 
@@ -44,8 +46,6 @@ Trainer.py - To train the Machine Leaning Model
 Bugs:
 
 Major Bugs(0) 
-
-Minor Bugs(1) - Email used instead of SMS due to unavailability of funds to buy SMS service.
 
 Bug Fixes(1) - issue: Security message gets sent to SPAM folder in user's device.  status: fixed
 
@@ -62,7 +62,5 @@ Trainer.py - To train the Machine Leaning Model
 Bugs:
 
 Major Bugs(0) 
-
-Minor Bugs(1) - Email used instead of SMS due to unavailability of funds to buy SMS service.
 
 Bug Fixes(0)
