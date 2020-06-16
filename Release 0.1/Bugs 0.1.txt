@@ -1,0 +1,2 @@
+Major Bugs : Notification email of Fraud Alert being received as Spam by the user's email inbox.
+Minor Bugs : Process Controller having issue sequence very large amount of transactions at a same time.
