@@ -1,0 +1,5 @@
+Major Bugs : Notification email of Fraud Alert being received as Spam by the user's email inbox.
+Fix: Issue was caused due to trailing spaces in the message text, and has been fixed
+
+Minor Issue: Process Controller having issue sequence very large amount of transactions at a same time.
+Fix: The timer limit has been increased to 120 seconds and the issue is fixed
