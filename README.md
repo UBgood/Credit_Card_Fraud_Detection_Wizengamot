@@ -25,3 +25,10 @@ Entity Classes:
 MLModel.py - To run the Machine Learning Model for Fraud Detection, 
 Trainer.py - To train the Machine Leaning Model
 
+Release 0.2
+
+Master Branch:
+
+Control Classes:
+ProcessController.py - Central control class that controls all sub-processes, 
+
